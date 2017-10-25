@@ -27,19 +27,19 @@
                     </div>
                 </div>
 
+
                 <p:panel style="border:none;padding-top: 5px;">
+                    <p:megaMenu orientation="horizontal" style="margin-top:40px;">
+                        <p:submenu label="Indicadores GoalBus" icon="ui-icon-script">
+                            <p:column>
+                                <p:submenu label="Reportes">
+                                    <p:menuitem value="Datos Encuestas" action="#{menu.refreshAscDescAbordo}" />
+                                </p:submenu>
+                            </p:column>
+                        </p:submenu>
 
+                    </p:megaMenu>
 
-                <p:menubar orientation="horizontal" style="margin-top:40px;">
-                    <p:submenu label="Gestion Usuarios" icon="ui-icon-script">
-                                <p:menuitem value="Usuarios" action="#{menu.refreshBVistaUsuarios}" />
-                                <p:menuitem value="Roles" action="#{menu.refreshBVistaRoles}" />
-                    </p:submenu>
-                    <f:facet name="options">
-                        <!--<p:outputLabel style="margin-right:10px" value="#{loginBean.nombreUsuario}"/>-->
-                        <!--<p:commandButton type="button" value="Salir" icon="ui-icon-extlink" actionListener="#{loginBean.logout}" />-->
-                    </f:facet>
-                </p:menubar>
                 </p:panel>
 
             </h:form>

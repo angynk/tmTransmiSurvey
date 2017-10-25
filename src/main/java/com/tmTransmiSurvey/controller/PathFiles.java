@@ -6,6 +6,7 @@ package com.tmTransmiSurvey.controller;
 public class PathFiles {
 
  public final static String PATH = "C:\\temp\\Indicadores\\";
+ public final static String ASC_DES_TRONCAL = "asc_des_troncal.xls";
   //  public final static String PATH = "M:\\temp\\Indicadores\\";
 
 }
