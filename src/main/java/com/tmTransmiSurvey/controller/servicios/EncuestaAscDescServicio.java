@@ -48,4 +48,8 @@ public class EncuestaAscDescServicio {
     public List<CuadroEncuesta> getEncuestasByFechaAndServicio(Date fechaInicio, Date fechaFin, String servicio){
         return cuadroEncuestaDao.getEncuestasByFechaAndServicio(fechaInicio,fechaFin,servicio);
     }
+
+    public List<RegistroEncuestaAscDesc> getRegistrosByEncuesta(CuadroEncuesta encuesta){
+        return registroEncuestaAscDescDao.getRegistrosByEncuesta(encuesta);
+    }
 }

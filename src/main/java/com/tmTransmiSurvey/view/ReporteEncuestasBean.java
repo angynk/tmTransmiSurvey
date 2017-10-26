@@ -45,6 +45,7 @@ public class ReporteEncuestasBean {
         serviciosRecords = new ArrayList<>();
         serviciosRecords.add("B11");
         serviciosRecords.add("K10");
+        serviciosRecords.add("Todos");
 
     }
 

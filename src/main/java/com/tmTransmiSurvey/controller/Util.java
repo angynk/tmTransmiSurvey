@@ -55,7 +55,7 @@ public class Util {
         FileInputStream fileIn = new FileInputStream(file);
         ServletOutputStream out = response.getOutputStream();
         response.setContentType("application/vnd.ms-excel");
-        response.setHeader("Content-Disposition", "attachment; filename=datosDiaADia.xls");
+        response.setHeader("Content-Disposition", "attachment; filename=ascensosDescensosTroncal.xls");
 
 
         byte[] outputByte = new byte[4096];

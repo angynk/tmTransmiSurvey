@@ -31,6 +31,8 @@
             <list>
                 <value>com.tmTransmiSurvey.model.entity.Usuario</value>
                 <value>com.tmTransmiSurvey.model.entity.Role</value>
+                <value>com.tmTransmiSurvey.model.entity.CuadroEncuesta</value>
+                <value>com.tmTransmiSurvey.model.entity.RegistroEncuestaAscDesc</value>
 
             </list>
         </property>

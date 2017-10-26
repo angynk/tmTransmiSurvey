@@ -2,6 +2,7 @@ package com.tmTransmiSurvey.model.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -17,7 +18,7 @@ public class CuadroEncuesta implements Serializable {
     @Column(name = "nombre_encuesta")
     private String nombre_encuesta;
     @Column(name = "fecha_encuesta")
-    private String fecha_encuesta;
+    private Date fecha_encuesta;
     @Column(name = "dia_semana")
     private String dia_semana;
     @Column(name = "servicio")
@@ -49,13 +50,6 @@ public class CuadroEncuesta implements Serializable {
         this.nombre_encuesta = nombre_encuesta;
     }
 
-    public String getFecha_encuesta() {
-        return fecha_encuesta;
-    }
-
-    public void setFecha_encuesta(String fecha_encuesta) {
-        this.fecha_encuesta = fecha_encuesta;
-    }
 
     public String getDia_semana() {
         return dia_semana;
@@ -119,5 +113,13 @@ public class CuadroEncuesta implements Serializable {
 
     public void setId_realm(int id_realm) {
         this.id_realm = id_realm;
+    }
+
+    public Date getFecha_encuesta() {
+        return fecha_encuesta;
+    }
+
+    public void setFecha_encuesta(Date fecha_encuesta) {
+        this.fecha_encuesta = fecha_encuesta;
     }
 }
