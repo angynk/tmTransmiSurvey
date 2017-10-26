@@ -24,6 +24,8 @@ public class RegistroEncuestaAscDesc {
     private int quedan;
     @Column(name = "hora_salida")
     private String hora_salida;
+    @Column(name = "observacion")
+    private String observacion;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "cuadro_encuesta", nullable = false)
@@ -94,5 +96,13 @@ public class RegistroEncuestaAscDesc {
 
     public void setCuadroEncuesta(CuadroEncuesta cuadroEncuesta) {
         this.cuadroEncuesta = cuadroEncuesta;
+    }
+
+    public String getObservacion() {
+        return observacion;
+    }
+
+    public void setObservacion(String observacion) {
+        this.observacion = observacion;
     }
 }

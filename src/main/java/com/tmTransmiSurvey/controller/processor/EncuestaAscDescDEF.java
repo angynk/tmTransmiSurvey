@@ -20,6 +20,7 @@ public class EncuestaAscDescDEF {
     public static int col_pas_suben = 10;
     public static int col_pas_quedan = 11;
     public static int col_hora_salida = 12;
+    public static int col_observacion = 13;
 
 
     //Valores Defecto
@@ -36,6 +37,7 @@ public class EncuestaAscDescDEF {
     public static String pasSuben = "Pas.Suben";
     public static String pasQuedan = "Pas.Quedan";
     public static String horaSalida = "Hora Salida";
+    public static String observacion = "Observaciones";
 
 
 }

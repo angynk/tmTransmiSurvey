@@ -77,6 +77,7 @@ public class ExportarDatosProcessor {
             createCellNumberResultados(rowInfo1,registro.getSuben(),EncuestaAscDescDEF.col_pas_suben);
             createCellNumberResultados(rowInfo1,registro.getQuedan(),EncuestaAscDescDEF.col_pas_quedan);
             createCellResultados(rowInfo1,registro.getHora_salida(),EncuestaAscDescDEF.col_hora_salida);
+            createCellResultados(rowInfo1,registro.getObservacion(),EncuestaAscDescDEF.col_observacion);
             rows++;
         }
         return rows;
@@ -101,6 +102,7 @@ public class ExportarDatosProcessor {
         createCellResultados(rowInfo1,EncuestaAscDescDEF.pasSuben,EncuestaAscDescDEF.col_pas_suben);
         createCellResultados(rowInfo1,EncuestaAscDescDEF.pasQuedan,EncuestaAscDescDEF.col_pas_quedan);
         createCellResultados(rowInfo1,EncuestaAscDescDEF.horaSalida,EncuestaAscDescDEF.col_hora_salida);
+        createCellResultados(rowInfo1,EncuestaAscDescDEF.observacion,EncuestaAscDescDEF.col_observacion);
 
     }
 
