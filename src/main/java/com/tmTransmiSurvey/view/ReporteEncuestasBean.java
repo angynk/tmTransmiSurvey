@@ -3,6 +3,7 @@ package com.tmTransmiSurvey.view;
 import com.tmTransmiSurvey.controller.PathFiles;
 import com.tmTransmiSurvey.controller.Util;
 import com.tmTransmiSurvey.controller.processor.ExportarDatosProcessor;
+import com.tmTransmiSurvey.model.entity.ServicioTs;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
@@ -36,11 +37,16 @@ public class ReporteEncuestasBean {
     public void init() {
         visibleDescarga = false;
         servicio = "B11";
-        serviciosRecords = new ArrayList<>();
-        serviciosRecords.add("B11");
-        serviciosRecords.add("K10");
-        serviciosRecords.add("Todos");
+        serviciosRecords = convertStringList (exportarDatosProcessor.encontrarTodosLosServicios());
 
+    }
+
+    private List<String> convertStringList(List<ServicioTs> servicioTs) {
+        List<String> lista = new ArrayList<>();
+        for(ServicioTs ser:servicioTs){
+            lista.add(ser.getNombre());
+        }
+        return lista;
     }
 
     public void exportarDatosEncuesta(){

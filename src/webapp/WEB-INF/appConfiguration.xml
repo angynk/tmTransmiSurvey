@@ -33,6 +33,9 @@
                 <value>com.tmTransmiSurvey.model.entity.Role</value>
                 <value>com.tmTransmiSurvey.model.entity.CuadroEncuesta</value>
                 <value>com.tmTransmiSurvey.model.entity.RegistroEncuestaAscDesc</value>
+                <value>com.tmTransmiSurvey.model.entity.ServicioTs</value>
+                <value>com.tmTransmiSurvey.model.entity.Estacion</value>
+                <value>com.tmTransmiSurvey.model.entity.ServicioEstacion</value>
 
             </list>
         </property>

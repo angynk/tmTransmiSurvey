@@ -4,6 +4,7 @@ import com.tmTransmiSurvey.model.dao.CuadroEncuestaDao;
 import com.tmTransmiSurvey.model.dao.RegistroEncuestaAscDescDao;
 import com.tmTransmiSurvey.model.entity.CuadroEncuesta;
 import com.tmTransmiSurvey.model.entity.RegistroEncuestaAscDesc;
+import com.tmTransmiSurvey.model.entity.ServicioTs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -52,4 +53,6 @@ public class EncuestaAscDescServicio {
     public List<RegistroEncuestaAscDesc> getRegistrosByEncuesta(CuadroEncuesta encuesta){
         return registroEncuestaAscDescDao.getRegistrosByEncuesta(encuesta);
     }
+
+
 }

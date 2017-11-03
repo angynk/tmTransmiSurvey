@@ -2,8 +2,10 @@ package com.tmTransmiSurvey.controller.processor;
 
 import com.tmTransmiSurvey.controller.PathFiles;
 import com.tmTransmiSurvey.controller.servicios.EncuestaAscDescServicio;
+import com.tmTransmiSurvey.controller.servicios.ServicioEstacionServicio;
 import com.tmTransmiSurvey.model.entity.CuadroEncuesta;
 import com.tmTransmiSurvey.model.entity.RegistroEncuestaAscDesc;
+import com.tmTransmiSurvey.model.entity.ServicioTs;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
@@ -24,6 +26,9 @@ public class ExportarDatosProcessor {
 
     @Autowired
     public EncuestaAscDescServicio encuestaAscDescServicio;
+
+    @Autowired
+    public ServicioEstacionServicio servicioEstacionServicio;
 
     public boolean exportarDatosEncuesta(Date fechaInicio, Date fechaFin, String servicio){
         List<CuadroEncuesta> encuestasByFechaAndServicio = encuestaAscDescServicio.getEncuestasByFechaAndServicio(fechaInicio, fechaFin, servicio);
@@ -65,6 +70,7 @@ public class ExportarDatosProcessor {
         for(RegistroEncuestaAscDesc registro : registros){
             Row rowInfo1 = worksheet.createRow(rows);
             createCellResultados(rowInfo1,sdfDate.format(encuesta.getFecha_encuesta()),EncuestaAscDescDEF.col_fecha);
+            createCellResultados(rowInfo1,encuesta.getAforador(),EncuestaAscDescDEF.col_aforador);
             createCellResultados(rowInfo1,encuesta.getDia_semana(),EncuestaAscDescDEF.col_dia_semana);
             createCellResultados(rowInfo1,encuesta.getServicio(),EncuestaAscDescDEF.col_servicio);
             createCellNumberResultados(rowInfo1,encuesta.getRecorrido(),EncuestaAscDescDEF.col_recorrido);
@@ -90,6 +96,7 @@ public class ExportarDatosProcessor {
     private void crearRowsIniciales(HSSFSheet worksheet) {
         Row rowInfo1 = worksheet.createRow(0);
         createCellResultados(rowInfo1,EncuestaAscDescDEF.fecha,EncuestaAscDescDEF.col_fecha);
+        createCellResultados(rowInfo1,EncuestaAscDescDEF.aforador,EncuestaAscDescDEF.col_aforador);
         createCellResultados(rowInfo1,EncuestaAscDescDEF.diaSemana,EncuestaAscDescDEF.col_dia_semana);
         createCellResultados(rowInfo1,EncuestaAscDescDEF.servicio,EncuestaAscDescDEF.col_servicio);
         createCellResultados(rowInfo1,EncuestaAscDescDEF.recorrido,EncuestaAscDescDEF.col_recorrido);
@@ -119,5 +126,9 @@ public class ExportarDatosProcessor {
         resultadoHoraIni.setCellValue(valor);
         resultadoHoraIni.setCellType(Cell.CELL_TYPE_NUMERIC);
         resultadoHoraIni.setCellValue(valor);
+    }
+
+    public List<ServicioTs> encontrarTodosLosServicios(){
+        return servicioEstacionServicio.encontrarTodosLosServicios();
     }
 }
