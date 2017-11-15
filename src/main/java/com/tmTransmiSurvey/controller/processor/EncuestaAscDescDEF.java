@@ -8,23 +8,25 @@ public class EncuestaAscDescDEF {
 
     //Columns
     public static int col_fecha = 0;
-    public static int col_dia_semana = 1;
-    public static int col_servicio = 2;
-    public static int col_recorrido = 3;
-    public static int col_num_bus = 4;
-    public static int col_num_puerta = 5;
-    public static int col_observador = 6;
-    public static int col_estacion = 7;
-    public static int col_hora_llegada = 8;
-    public static int col_pas_bajan = 9;
-    public static int col_pas_suben = 10;
-    public static int col_pas_quedan = 11;
-    public static int col_hora_salida = 12;
-    public static int col_observacion = 13;
+    public static int col_aforador = 1;
+    public static int col_dia_semana = 2;
+    public static int col_servicio = 3;
+    public static int col_recorrido = 4;
+    public static int col_num_bus = 5;
+    public static int col_num_puerta = 6;
+    public static int col_observador = 7;
+    public static int col_estacion = 8;
+    public static int col_hora_llegada = 9;
+    public static int col_pas_bajan = 10;
+    public static int col_pas_suben = 11;
+    public static int col_pas_quedan = 12;
+    public static int col_hora_salida = 13;
+    public static int col_observacion = 14;
 
 
     //Valores Defecto
     public static String fecha = "Fecha";
+    public static String aforador = "aforador";
     public static String diaSemana = "Dia Semana";
     public static String servicio = "Servicio";
     public static String recorrido = "Recorrido";

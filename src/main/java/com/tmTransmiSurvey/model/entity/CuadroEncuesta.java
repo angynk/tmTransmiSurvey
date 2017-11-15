@@ -25,6 +25,8 @@ public class CuadroEncuesta implements Serializable {
     private String servicio;
     @Column(name = "num_bus")
     private String num_bus;
+    @Column(name = "aforador")
+    private String aforador;
     @Column(name = "recorrido")
     private int recorrido;
     @Column(name = "num_puerta")
@@ -121,5 +123,13 @@ public class CuadroEncuesta implements Serializable {
 
     public void setFecha_encuesta(Date fecha_encuesta) {
         this.fecha_encuesta = fecha_encuesta;
+    }
+
+    public String getAforador() {
+        return aforador;
+    }
+
+    public void setAforador(String aforador) {
+        this.aforador = aforador;
     }
 }
