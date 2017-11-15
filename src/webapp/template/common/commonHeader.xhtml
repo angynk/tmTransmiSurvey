@@ -32,12 +32,19 @@
                     <p:megaMenu orientation="horizontal" style="margin-top:40px;">
                         <p:submenu label="Reportes" icon="ui-icon-script">
                             <p:column>
-                                <p:submenu label="Reportes">
+                                <p:submenu label="Datos Base">
                                     <p:menuitem value="Datos Encuestas" action="#{menu.refreshAscDescAbordo}" />
+                                    <p:menuitem value="Prcesamiento de Datos" action="#{menu.refreshProcesamientoDatos}" />
                                 </p:submenu>
                             </p:column>
                         </p:submenu>
-
+                        <p:submenu label="Reportes" icon="ui-icon-script">
+                            <p:column>
+                                <p:submenu label="Reporte">
+                                    <p:menuitem value="Reporte" action="#{menu.refreshAscDescAbordo}" />
+                                </p:submenu>
+                            </p:column>
+                        </p:submenu>
                     </p:megaMenu>
 
                 </p:panel>

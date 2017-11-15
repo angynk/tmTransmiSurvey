@@ -20,6 +20,26 @@ public class MenuBean {
         }
     }
 
+    public void refreshProcesamientoDatos(){
+        ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
+        try {
+            ec.redirect(ec.getRequestContextPath()
+                    + "/secured/procesarDatosEncuestas.xhtml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void refreshVisualizarReporte(){
+        ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
+        try {
+            ec.redirect(ec.getRequestContextPath()
+                    + "/secured/visualizarDatosEncuestas.xhtml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
 
